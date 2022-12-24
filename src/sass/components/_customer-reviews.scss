@@ -1,0 +1,183 @@
+.customer-reviews {
+  display: none;
+
+  @include breakpointFrom(tablet) {
+    display: block;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 106px;
+  }
+
+  &__container {
+    @include breakpointFrom(tablet) {
+      padding-left: 74px;
+      padding-right: 74px;
+    }
+
+    @include breakpointFrom(desktop) {
+      padding-left: 83px;
+      padding-right: 83px;
+    }
+  }
+
+  &__photo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    & img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &__quote-wrapper {
+    width: 70%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 43px;
+    padding-bottom: 26px;
+    position: relative;
+    z-index: 1;
+    background-color: $quote-bg-color;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include breakpointFrom(tablet) {
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 37px;
+      padding-bottom: 36px;
+    }
+
+    @include breakpointFrom(desktop) {
+      padding-left: 105px;
+      padding-right: 105px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__subtext {
+    @include breakpointFrom(tablet) {
+      font-size: 16px;
+    }
+
+    @include breakpointFrom(desktop) {
+      font-size: 21px;
+    }
+  }
+
+  &__quote {
+    padding-left: 15px;
+    position: relative;
+    padding-right: 8px;
+    font-size: 12px;
+
+    font-weight: 500;
+    line-height: 2.55;
+    text-align: center;
+    z-index: 0;
+    background: repeating-linear-gradient(
+      $quote-bg-color,
+      $quote-bg-color 26px,
+      $quote-line-color 27px,
+      $quote-bg-color 28px 31px
+    );
+
+    @include breakpointFrom(tablet) {
+      font-size: 14px;
+      line-height: 2.16;
+      letter-spacing: 0.04em;
+      padding-left: 45px;
+      padding-right: 50px;
+      background: repeating-linear-gradient(
+        $quote-bg-color,
+        $quote-bg-color 25px,
+        $quote-line-color 26px,
+        $quote-bg-color 27px 32px
+      );
+    }
+
+    @include breakpointFrom(desktop) {
+      font-size: 16px;
+      line-height: 1.86;
+      letter-spacing: 0.04em;
+      padding-left: 36px;
+      padding-right: 36px;
+      background: repeating-linear-gradient(
+        $quote-bg-color,
+        $quote-bg-color 26px,
+        $quote-line-color 27px,
+        $quote-bg-color 28px 31px
+      );
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 54px;
+      height: 40px;
+      top: -17px;
+      left: 6;
+      z-index: -1;
+    }
+  }
+
+  &__person {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 16px;
+  }
+}
+
+.slick-dots {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-active .sl-link {
+  background-image: url('../images/home.svg');
+  width: 44px;
+  height: 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.slick-active .sl-link .sl-inner {
+  display: none;
+}
+
+.sl-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.sl-link {
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: makeTransition(background-color);
+
+  &:hover .sl-inner {
+    background-color: $brand-color;
+  }
+}
+
+.sl-inner {
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}

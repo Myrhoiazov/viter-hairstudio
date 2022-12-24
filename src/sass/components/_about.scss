@@ -1,0 +1,224 @@
+.about {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include breakpointFrom(tablet) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  background-repeat: no-repeat;
+  background-position: 50% 75%;
+  background-size: contain;
+
+  @include breakpointTo(tablet) {
+    background-image: url(../images/about/spilledmilk1x-mobile.png);
+
+    @include breakpointDPR(2) {
+      background-image: url(../images/about/spilledmilk2x-mobile.png);
+    }
+  }
+
+  @include breakpointFrom(desktop) {
+    background-image: url(../images/about/spilledmilk1x-descktop.png);
+
+    @include breakpointDPR(2) {
+      background-image: url(../images/about/spilledmilk1x-descktop.png);
+    }
+
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  background-color: $quote-bg-color;
+}
+
+.about__thumb {
+  @include breakpointFrom(tablet) {
+    display: flex;
+  }
+}
+
+.about__label {
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $brand-accent;
+
+  @include breakpointFrom(tablet) {
+    font-size: 22px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 22px;
+  }
+}
+
+.about__title {
+  color: $brand-color;
+  text-align: center;
+
+  @include breakpointFrom(tablet) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+}
+
+.about__block {
+  margin-top: 40px;
+  width: 220px;
+
+  @include breakpointFrom(tablet) {
+    margin-left: 32px;
+    margin-top: 0;
+    width: 335px;
+  }
+
+  @include breakpointFrom(desktop) {
+    width: 440px;
+    margin-left: 160px;
+  }
+}
+
+.about__text {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: $brand-accent;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  @include breakpointFrom(tablet) {
+    font-size: 14px;
+    line-height: 1.77;
+
+    padding-right: 25px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 16px;
+    padding-right: 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.button--about {
+  font-weight: 700;
+  width: 176px;
+  height: 44px;
+  margin-top: 20px;
+
+  @include breakpointFrom(tablet) {
+    margin-top: 40px;
+  }
+}
+
+.about__icon {
+  width: 15px;
+  height: 15px;
+  fill: transparent;
+  stroke: $brand-color;
+  margin-left: 15px;
+}
+
+.img__wrapper {
+  position: relative;
+  width: 290px;
+  height: 300px;
+
+  border: 1px solid $brand-accent;
+  border-radius: 20px;
+
+  background-color: transparent;
+
+  .about__data {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+
+    .about__name {
+      font-size: 14px;
+    }
+
+    .about__subname {
+      font-size: 12px;
+    }
+  }
+
+  @include breakpointFrom(tablet) {
+    width: 390px;
+    height: 350px;
+
+    .about__data {
+      right: 50px;
+      bottom: 0;
+
+      .about__name {
+        font-size: 16px;
+      }
+
+      .about__subname {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include breakpointFrom(desktop) {
+    width: 440px;
+    height: 450px;
+
+    .about__data {
+      right: 0;
+      bottom: 20px;
+
+      .about__name {
+        font-size: 18px;
+      }
+
+      .about__subname {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.about__img {
+  display: block;
+
+  width: 290px;
+  height: 300px;
+
+  transform: translate(-15px, 15px);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+  box-shadow: $img-shadow;
+
+  @include breakpointFrom(tablet) {
+    width: 350px;
+    height: 350px;
+
+    transform: translate(-15px, 30px);
+  }
+
+  @include breakpointFrom(desktop) {
+    width: 450px;
+    height: 450px;
+
+    margin-left: 60px;
+  }
+}

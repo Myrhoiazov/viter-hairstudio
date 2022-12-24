@@ -1,0 +1,259 @@
+.footer {
+  font-style: normal;
+  background-color: $brand-color;
+
+  &__container {
+    padding-top: 40px;
+  }
+}
+
+.rights-reserved {
+  width: 100%;
+  border-top: 1px solid $quote-line-color;
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    text-align: center;
+    color: $bg-color-black;
+  }
+}
+
+.footer__title {
+  font-style: normal;
+  color: white;
+  margin-bottom: 30px;
+}
+
+@include breakpointTo(tablet) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .handmade {
+    margin-bottom: 40px;
+    &__under-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .socials {
+    &__link {
+      width: 32px;
+      height: 32px;
+    }
+    &__box:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+  .rights-reserved {
+    display: block;
+    padding: 20px;
+  }
+
+  .footer__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@include breakpointFrom(tablet) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .handmade {
+    max-width: 370px;
+    &__upper-text {
+      font-size: 30px;
+      line-height: 1.13;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    &__under-text {
+      font-size: 58px;
+      line-height: 1.14;
+      letter-spacing: 0.06em;
+    }
+    &__under-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .footer__title {
+    text-align: left;
+  }
+
+  .socials {
+    &__link {
+      width: 34px;
+      height: 34px;
+    }
+    &__box:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  .rights-reserved {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 0;
+
+    &__text {
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+@include breakpointFrom(desktop) {
+  .footer__container {
+    padding-bottom: 60px;
+  }
+  .handmade {
+    max-width: 540px;
+    &__upper-text {
+      margin-bottom: 16px;
+    }
+  }
+  .socials {
+    &__box:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpointFrom(tablet) {
+    display: block;
+
+    .footer__title {
+      text-align: left;
+    }
+  }
+
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & .contact__item {
+      margin-left: 0;
+
+      .icon {
+        fill: white;
+      }
+    }
+
+    .contact__link {
+      color: white;
+      font-size: 14px;
+    }
+  }
+}
+
+.footer__contact {
+  font-style: normal;
+}
+
+.contact__item {
+  margin-bottom: 10px;
+
+  & .footer__map-link {
+    text-align: left;
+  }
+}
+
+.contact__map-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: $img-shadow-accent;
+  margin-bottom: 20px;
+
+  .google-map {
+    display: block;
+    width: 350px;
+    height: 250px;
+  }
+
+  @include breakpointFrom(tablet) {
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    .google-map {
+      width: 600px;
+    }
+  }
+
+  @include breakpointFrom(desktop) {
+    margin: 0;
+
+    .google-map {
+      width: 600px;
+    }
+  }
+}
+
+.google-map {
+  display: block;
+  width: 100%;
+  height: 250px;
+}
+
+.footer-social {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.footer-social .address-social__item {
+  font-size: 14px;
+  font-style: normal;
+  color: white;
+
+  .address-social__links {
+    color: inherit;
+
+    .icon {
+      fill: white;
+
+      &:hover {
+        fill: $bg-color-black;
+      }
+    }
+  }
+}
+
+.contact__sheddule {
+  display: flex;
+  flex-direction: column;
+
+  .contact__sheddule-links {
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .sheddule-time {
+    font-size: 12px;
+  }
+
+  .contact__link {
+    font-size: 14px;
+    font-style: normal;
+    color: white;
+  }
+}
+
+.icon-location {
+  margin-right: 10px;
+}
