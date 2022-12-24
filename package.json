@@ -2,20 +2,20 @@
   "name": "beauty-hair",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Myrhoiazov.github.io/beauty-hair",
+  "homepage": "https://Myrhoiazov.github.io/viter-hairstudio",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /beauty-hair/"
+    "build": "parcel build src/*.html --public-url /viter-hairstudio/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Myrhoiazov/beauty-hair"
+    "url": "git+https://github.com/Myrhoiazov/viter-hairstudio"
   },
   "keywords": [],
   "author": "Denys Myrhoiazov <denis.mirgoyazov@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Myrhoiazov/beauty-hair/issues"
+    "url": "https://github.com/Myrhoiazov/viter-hairstudio/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
