@@ -281,6 +281,11 @@
     padding: 1em;
     text-align: center;
 
+    .card__text{
+      color: rgb(211, 211, 211);
+      font-size: 14px;
+    }
+
     @include breakpointFrom(tablet) {
       padding: 10px;
     }
