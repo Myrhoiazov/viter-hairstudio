@@ -149,6 +149,7 @@
 
     & .contact__item {
       margin-left: 0;
+      margin-bottom: 10px;
 
       .icon {
         fill: white;
@@ -167,7 +168,6 @@
 }
 
 .contact__item {
-  margin-bottom: 10px;
 
   & .footer__map-link {
     text-align: left;
@@ -236,6 +236,10 @@
 .contact__sheddule {
   display: flex;
   flex-direction: column;
+
+  .contact__item {
+    margin-bottom: 10px;
+  }
 
   .contact__sheddule-links {
     letter-spacing: 0.05rem;
