@@ -42,8 +42,8 @@
   }
 
   @include breakpointFrom(desktop) {
-    width: 35%;
-    height: 400px;
+    width: 650px;
+    height: 450px;
 
     padding: 80px 40px;
   }
@@ -176,7 +176,6 @@
 // Slider
 
 .center {
-  // width: 70%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -186,6 +185,10 @@
 
   @include breakpointFrom(tablet) {
     margin-left: 3px;
+  }
+
+  @include breakpointFrom(desktop) {
+    width: 100%;
   }
 }
 
@@ -200,7 +203,7 @@
   }
 
   @include breakpointFrom(desktop) {
-    width: 45em;
+    width: 50em;
   }
 
   & > .inner {
@@ -245,7 +248,7 @@
     padding: 1em;
     text-align: center;
 
-    .card__text{
+    .card__text {
       color: rgb(211, 211, 211);
       font-size: 14px;
     }

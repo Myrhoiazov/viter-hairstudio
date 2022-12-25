@@ -116,17 +116,6 @@
   .footer__container {
     padding-bottom: 60px;
   }
-  .handmade {
-    max-width: 540px;
-    &__upper-text {
-      margin-bottom: 16px;
-    }
-  }
-  .socials {
-    &__box:not(:last-child) {
-      margin-right: 24px;
-    }
-  }
 }
 
 .footer-address {
@@ -142,10 +131,11 @@
     }
   }
 
-  .footer__contact {
+.footer__contact {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-style: normal;
 
     & .contact__item {
       margin-left: 0;
@@ -154,23 +144,20 @@
       .icon {
         fill: white;
       }
+
+      &:hover .contact__link{
+        color: $bg-color-black;
+      }
+
+      &:hover .icon{
+        fill: $bg-color-black;
+      }
     }
 
     .contact__link {
       color: white;
       font-size: 14px;
     }
-  }
-}
-
-.footer__contact {
-  font-style: normal;
-}
-
-.contact__item {
-
-  & .footer__map-link {
-    text-align: left;
   }
 }
 
@@ -218,19 +205,7 @@
 .footer-social .address-social__item {
   font-size: 14px;
   font-style: normal;
-  color: white;
-
-  .address-social__links {
-    color: inherit;
-
-    .icon {
-      fill: white;
-
-      &:hover {
-        fill: $bg-color-black;
-      }
-    }
-  }
+  color: rgb(255, 255, 255);
 }
 
 .contact__sheddule {
@@ -256,8 +231,4 @@
     font-style: normal;
     color: white;
   }
-}
-
-.icon-location {
-  margin-right: 10px;
 }
