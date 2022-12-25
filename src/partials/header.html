@@ -8,6 +8,8 @@
             <a
               href="https://www.tiktok.com/@viter.hair?_t=8XqBwyVZGh4&_r=1"
               class="address-social__links"
+              role="link"
+              aria-label="social link"
               ><svg class="icon">
                 <use
                   href="./images/icon/symbol-defs.svg#icon-tik-tok"
@@ -17,6 +19,8 @@
             <a
               href="https://www.instagram.com/viter_hair/?igshid=MWI4MTIyMDE%3D"
               class="address-social__links"
+              role="link"
+              aria-label="social link"
               ><svg class="icon">
                 <use
                   href="./images/icon/symbol-defs.svg#icon-instagram"
@@ -29,7 +33,7 @@
   <div class="nav-wrapper">
     <div class="container">
       <div class="header__nav">
-        <a href="/" class="logo header__logo">
+        <a href="/" class="logo header__logo" role="link">
           <img
             src="./images/logo-beuty/logo-black.png"
             alt="Логотип"
@@ -39,27 +43,27 @@
             loading="lazy"
         /></a>
         <nav class="nav" data-menu id="menu-container">
-          <ul class="nav__items">
-            <li class="nav__item">
-              <a href="#home" class="nav__link">ГОЛОВНА</a>
+          <ul class="nav__items" role="menu" aria-labelledby="menubutton">
+            <li class="nav__item" role="presentation">
+              <a href="#home" role="menuitem" class="nav__link">ГОЛОВНА</a>
             </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">О нас</a>
+            <li class="nav__item" role="presentation">
+              <a href="#about" role="menuitem" class="nav__link">О нас</a>
             </li>
-            <li class="nav__item">
-              <a href="#products" class="nav__link">ПОСЛУГИ</a>
+            <li class="nav__item" role="presentation">
+              <a href="#products" role="menuitem" class="nav__link">ПОСЛУГИ</a>
             </li>
-            <li class="nav__item">
-              <a href="#price" class="nav__link">ПРАЙС</a>
+            <li class="nav__item" role="presentation">
+              <a href="#price" role="menuitem" class="nav__link">ПРАЙС</a>
             </li>
-            <li class="nav__item">
-              <a href="#masters" class="nav__link">Майстри</a>
+            <li class="nav__item" role="presentation">
+              <a href="#masters" role="menuitem" class="nav__link">Майстри</a>
             </li>
-            <li class="nav__item">
-              <a href="#faq" class="nav__link">FAQ</a>
+            <li class="nav__item" role="presentation">
+              <a href="#faq" role="menuitem" class="nav__link">FAQ</a>
             </li>
-            <li class="nav__item">
-              <a href="#footer" class="nav__link">КОНТАКТИ</a>
+            <li class="nav__item" role="presentation">
+              <a href="#footer" role="menuitem" class="nav__link">КОНТАКТИ</a>
             </li>
           </ul>
           <ul class="contact__items">
@@ -78,20 +82,21 @@
         <button
           class="button__menu"
           type="button"
+          role="button"
           data-menu-button
           aria-controls="menu-container"
-          aria-label="Closed button"
+          aria-label="button"
         >
           <span class="button__line"></span>
         </button>
         <ul class="contact__items">
           <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link"
+            <a href="mailto:info@devstudio.com" class="contact__link" aria-label="email link"
               ><svg class="icon contact__icon" aria-label="post">
                 <use href="./images/icon/symbol-defs.svg#icon-post"></use></svg>info@devstudio.com</a>
           </li>
           <li class="contact__item">
-            <a href="tel:+3800730011110" class="contact__link"
+            <a href="tel:+3800730011110" class="contact__link" aria-label="tel link"
               ><svg class="icon contact__icon" aria-label="phone">
                 <use href="./images/icon/symbol-defs.svg#icon-phone"></use></svg>+380 073 001 11 10</a>
           </li>
