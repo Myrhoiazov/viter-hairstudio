@@ -42,7 +42,6 @@
   }
 
   &-card {
-    background: $white;
     box-shadow: $img-shadow-accent;
     border-radius: 24px;
     overflow: hidden;
@@ -114,26 +113,26 @@
   }
 }
 
-
 .listing-item {
-  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   border-radius: 24px;
   overflow: hidden;
 
   cursor: pointer;
 
-  & .listing {
+  .listing {
+    flex-grow: 1;
     padding: 20px;
+    background-color: white;
     position: relative;
 
     &:before {
       content: '';
       position: absolute;
       top: -15px;
-      left: -o-calc(50% - 15px);
-      left: -moz-calc(50% - 15px);
-      left: -webkit-calc(50% - 15px);
       left: calc(50% - 15px);
       border-bottom: 20px solid #fff;
       border-left: 20px solid transparent;
@@ -141,8 +140,6 @@
     }
   }
 }
-
-
 
 figure.image img {
   width: 100%;
@@ -170,7 +167,6 @@ figure.image figcaption {
   background-color: rgba(0, 0, 0, 0.6);
   overflow: hidden;
   transition: background-color 0.2s ease-in;
-
 }
 figcaption .caption {
   position: relative;
@@ -189,7 +185,6 @@ figcaption .caption {
     border-bottom: 1px solid #ccc;
   }
 }
-
 
 .listing-item:hover figure.image figcaption {
   background: rgba(195, 39, 43, 0.6);
