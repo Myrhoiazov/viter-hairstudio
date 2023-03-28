@@ -7,10 +7,30 @@
       rgba(34, 83, 78, 0.4),
       rgba(34, 83, 78, 0.7)
     ),
-    url('../images/beauty-png/bc-hero-min.jpg');
+    url('../images/hero/desktop/desktop_hero@1x.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(34, 83, 78, 0.4),
+        rgba(34, 83, 78, 0.7)
+      ),
+      url('../images/hero/desktop/desktop_hero@1.5x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(34, 83, 78, 0.4),
+          rgba(34, 83, 78, 0.7)
+        ),
+        url('../images/hero/desktop/desktop_hero@2x.jpg');
+    }
+  }
 }
 
 .hero__body {
