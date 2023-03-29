@@ -13,6 +13,8 @@
 .advantages__wrapper {
   @include breakpointFrom(tablet) {
     display: flex;
+    align-items: center;
+    gap: 5;
   }
 }
 
@@ -62,7 +64,7 @@
   line-height: 1.4;
 
   @include breakpointFrom(tablet) {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @include breakpointFrom(desktop) {
@@ -95,7 +97,7 @@
   letter-spacing: 0.02em;
 
   @include breakpointFrom(tablet) {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   @include breakpointFrom(desktop) {
@@ -214,56 +216,61 @@
 }
 
 .card {
+  overflow: hidden;
   width: 160px;
-  height: 200px;
+  height: 350px;
 
   border-radius: 0.5em;
-  box-shadow: $img-shadow-accent;
-
   margin-bottom: 40px;
 
+  .img-wrap {
+    overflow: hidden;
+    height: 280px;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-top-right-radius: inherit;
+      border-top-left-radius: inherit;
+    }
+  }
+
   @include breakpointFrom(tablet) {
-    width: 160px;
-    height: 195px;
+    width: 100%;
+    height: 350px;
     margin: 0;
   }
 
   @include breakpointFrom(desktop) {
     width: 200px;
-    height: 250px;
-  }
-
-  & > img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
+    min-height: 357px;
+    height: 100%;
   }
 
   & > .content {
     background: $brand-color;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
-    padding: 1em;
     text-align: center;
+    min-height: 76px;
+    padding: 5px;
 
     .card__text {
       color: rgb(211, 211, 211);
       font-size: 14px;
+
+      @include breakpointFrom(tablet) {
+        font-size: 12px;
+      }
     }
 
     @include breakpointFrom(tablet) {
-      padding: 10px;
+      padding: 5px;
     }
 
-    @include breakpointFrom(desktop) {
-      padding: 1em;
-    }
-
-    & > h1,
     & > h3 {
-      margin: 0.35em 0;
+      margin-bottom: 0.35em;
     }
 
     & > h1 {
@@ -280,39 +287,16 @@
     }
 
     & > h3 {
-      color: #ccc;
-      font-size: 0.5rem;
-      font-weight: 300;
+      color: $white;
+      font-size: 1rem;
+      font-weight: 500;
 
       @include breakpointFrom(tablet) {
-        font-size: 0.7em;
+        font-size: 1.1em;
       }
 
       @include breakpointFrom(desktop) {
-        font-size: 0.9rem;
-      }
-    }
-  }
-}
-
-.map {
-  // margin-top: 1em;
-  & > button {
-    padding: 10px;
-    background: $brand-color;
-    cursor: pointer;
-    margin: 0 0.125em;
-    border-radius: 50%;
-
-    &.active {
-      &:after {
-        background: $brand-color;
-        content: '';
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        border-radius: 50%;
+        font-size: 1.2rem;
       }
     }
   }

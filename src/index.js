@@ -1,3 +1,5 @@
+import Splide from '@splidejs/splide';
+
 (() => {
   const refs = {
     menuBtn: document.querySelector('[data-menu-button]'),
@@ -91,6 +93,7 @@
   };
 })();
 
+// Slider Reviews
 $('.reviews__slider').slick({
   dots: true,
   arrows: false,
@@ -102,26 +105,28 @@ $('.reviews__slider').slick({
 
 // --------------
 // Masters slider
-const buttonsWrapper = document.querySelector('.map');
-const slides = document.querySelector('.inner');
+const splide = new Splide('#mastersSlide', {
+  type: 'loop',
+  perPage: 3,
+  width: '50rem',
+  gap: 4,
+  pagination: false,
+  lazyLoad: true,
+  breakpoints: {
+    1280: {
+      gap: 1,
+      perPage: 1,
+      width: '18rem',
+    },
 
-buttonsWrapper.addEventListener('click', e => {
-  if (e.target.nodeName === 'BUTTON') {
-    Array.from(buttonsWrapper.children).forEach(item =>
-      item.classList.remove('active')
-    );
-    if (e.target.classList.contains('first')) {
-      slides.style.transform = 'translateX(-0%)';
-      e.target.classList.add('active');
-    } else if (e.target.classList.contains('second')) {
-      slides.style.transform = 'translateX(-33.33333333333333%)';
-      e.target.classList.add('active');
-    } else if (e.target.classList.contains('third')) {
-      slides.style.transform = 'translateX(-66.6666666667%)';
-      e.target.classList.add('active');
-    }
-  }
+    767: {
+      gap: 2,
+      perPage: 1,
+      width: '23rem',
+    },
+  },
 });
+splide.mount();
 
 // -----------------
 // Section animation
