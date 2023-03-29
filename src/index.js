@@ -1,5 +1,3 @@
-import Splide from '@splidejs/splide';
-
 (() => {
   const refs = {
     menuBtn: document.querySelector('[data-menu-button]'),
