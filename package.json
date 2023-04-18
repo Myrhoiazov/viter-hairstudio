@@ -5,7 +5,8 @@
   "homepage": "https://Myrhoiazov.github.io/viter-hairstudio",
   "scripts": {
     "start": "parcel src/*.html --open",
-    "build": "parcel build src/*.html --public-url /viter-hairstudio/"
+    "build": "parcel build src/*.html --public-url /viter-hairstudio/",
+    "build:prod": "parcel build src/*.html"
   },
   "repository": {
     "type": "git",

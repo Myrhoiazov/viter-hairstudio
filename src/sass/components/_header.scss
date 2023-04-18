@@ -116,8 +116,6 @@
     &.is-open {
       transform: translateX(0);
     }
-
-
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -162,7 +160,7 @@
 
 .nav__items {
   @media screen and (max-width: 1279px) {
-    padding-top: 123px;
+    padding-top: 50px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -186,7 +184,7 @@
 .nav__link {
   display: block;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2;
   text-transform: uppercase;
 
