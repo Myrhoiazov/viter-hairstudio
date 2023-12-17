@@ -1,5 +1,5 @@
 const modals = () => {
-  const VISIT = 'Is Visited';
+  //   const VISIT = 'Is Visited';
 
   const refs = {
     arrModalOpeners: document.querySelectorAll('[data-btn-open]'),
@@ -32,12 +32,8 @@ const modals = () => {
 
   const backdrop = document.querySelector('[data-modal]');
   const arrBtnClose = document.querySelector('.btn-close');
-  let isVisit = localStorage.getItem(VISIT);
-
-  if (isVisit) return;
 
   setTimeout(() => {
-    localStorage.setItem(VISIT, 'visited');
     backdrop.setAttribute('data-modal', 'buynow');
     document.body.classList.add('no-scroll');
 
@@ -53,7 +49,7 @@ const modals = () => {
         onHandleClick();
       }
     });
-  }, 3000);
+  }, 10000);
 
   function onHandleClick() {
     backdrop.setAttribute('data-modal', '');
