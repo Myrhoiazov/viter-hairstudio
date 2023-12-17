@@ -1,63 +1,71 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+	height: 100%;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 body {
-  font-family: $main-font;
-  font-weight: 500;
-  color: $text-color;
-  background-color: $white;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	font-family: $main-font;
+	font-weight: 500;
+	color: $black;
+	background-color: $white;
 
-  &::after {
-    content: '';
-    opacity: 0;
-    transition: all 0.2s linear;
-  }
+	&::after {
+		content: '';
+		opacity: 0;
+		transition: all 0.2s linear;
+	}
 
-  &.no-scroll {
-    height: 100vh;
-    overflow: hidden;
+	&.no-scroll {
+		height: 100vh;
+		overflow: hidden;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100vw;
-      height: 100vh;
-      // transform: translateX(0);
-      opacity: 1;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100vw;
+			height: 100vh;
+			// transform: translateX(0);
+			opacity: 1;
 
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+			background-color: rgba(0, 0, 0, 0.5);
+		}
 
-    @include breakpointFrom(desktop) {
-      &.menu-opened {
-        overflow: auto;
-      }
-    }
-  }
+		@include breakpointFrom(desktop) {
+			&.menu-opened {
+				overflow: auto;
+			}
+		}
+	}
+}
+
+.main {
+	flex: 1 0 auto;
 }
 
 // Transition - animation section
-
 .js-hidden {
-  transform: translateY(10%);
-  filter: blur(5px);
-  opacity: 0;
+	transform: translateY(10%);
+	filter: blur(5px);
+	opacity: 0;
 
-  transition: all 1s linear;
+	transition: all 1s linear;
 
-  &.show {
-    transform: translateY(0);
-    filter: blur(0);
+	&.show {
+		transform: translateY(0);
+		filter: blur(0);
 
-    opacity: 1;
-  }
+		opacity: 1;
+	}
 }
 
 h1,
@@ -68,163 +76,213 @@ h5,
 h6,
 ul,
 p {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 img {
-  display: block;
-  // width: 100%;
-  // height: auto;
+	display: block;
+	// width: 100%;
+	// height: auto;
 }
 
 a {
-  cursor: pointer;
-  text-decoration: none;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 ul,
 ol {
-  list-style: none;
+	list-style: none;
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
 
-  @include breakpointFrom(mobile) {
-    max-width: 320px;
-  }
+	@include breakpointFrom(mobile) {
+		max-width: 320px;
+	}
 
-  @include breakpointFrom(tablet) {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+	@include breakpointFrom(tablet) {
+		max-width: 768px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
 
-  @include breakpointFrom(desktop) {
-    max-width: 1280px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+	@include breakpointFrom(desktop) {
+		max-width: 1280px;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 }
 
 .title {
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-
-  color: $brand-color;
-  text-shadow: $img-shadow;
+	font-family: $main-font;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: $brand-color;
+	text-shadow: $img-shadow;
 }
 
 .text {
-  font-family: $brand-font;
-  font-size: 18px;
-  line-height: 1.17;
-  text-align: center;
-  color: $brand-accent;
+	font-size: 18px;
+	line-height: 1.17;
+	text-align: center;
+	color: $brand-accent;
 }
 
 .subtext {
-  font-family: $main-font;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.62;
-  color: $brand-accent;
+	font-family: $main-font;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1.62;
+	color: $brand-accent;
 }
 
 .visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
 }
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  padding-right: 35px;
-  padding-left: 35px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.3;
-  cursor: pointer;
-  color: $brand-color;
-  background-color: $white;
-  border-radius: 20px;
-  border: none;
-  transition: makeTransition(background-color);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	padding-right: 35px;
+	padding-left: 35px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.3;
+	cursor: pointer;
+	color: $brand-color;
+	background-color: $white;
+	border-radius: 20px;
+	border: none;
+	transition: makeTransition(background-color);
 }
 
 .button:hover,
 .button:focus {
-  background-color: $hover-bg-color;
+	background-color: $hover-bg-color;
 }
 
 .button--accent {
-  color: $white;
-  background-color: $brand-color;
+	color: $white;
+	background-color: $brand-color;
 }
 
 .button--round {
-  width: 50px;
-  height: 50px;
-  padding: 0;
-  border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	border-radius: 50%;
 }
 
 .button--alternate {
-  color: $white;
-  background-color: $alternate-accent-color;
+	color: $white;
+	background-color: $alternate-accent-color;
 }
 
 .button--accent:hover,
 .button--accent:focus,
 .button--alternate:hover,
 .button--alternate:focus {
-  background-color: $hover-bg-accent-color;
+	background-color: $bg-accent-color;
 }
 
 .button--bold {
-  height: 44px;
-  font-size: 16px;
-  font-weight: 700;
+	height: 44px;
+	font-size: 16px;
+	font-weight: 700;
 }
 
 .social-link {
-  display: inline-flex;
-  width: 34px;
-  height: 34px;
-  justify-content: center;
-  align-items: center;
-  background-color: $social-bg-color;
-  color: $white;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: makeTransition(background-color);
+	display: inline-flex;
+	width: 34px;
+	height: 34px;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: makeTransition(background-color);
 }
 
 .social-link:hover,
 .social-link:focus {
-  background-color: $brand-color;
+	background-color: $brand-color;
 }
 
 .social-link__icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  transition: makeTransition(fill);
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+	transition: makeTransition(fill);
+}
+
+.callback {
+	position: fixed;
+	top: 140px;
+	right: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	font-size: 0.7em;
+	font-weight: light;
+	font-family: 'Trebuchet MS', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.3;
+	letter-spacing: -1px;
+	color: $white;
+	border: none;
+	border-radius: 50%;
+	background: $alternate-accent-color;
+	cursor: pointer;
+	box-shadow: 0 0 0 0 rgba($alternate-accent-color, .5);
+	animation: pulse 1.5s infinite;
+
+	&:hover {
+		animation: none;
+	}
+
+	@include breakpointFrom(desktop) {
+		top: 180px;
+		right: 50px;
+		width: 75px;
+		height: 75px;
+		font-size: 0.8em;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(.9);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 50px rgba($alternate-accent-color, 0);
+	}
+
+	100% {
+		transform: scale(.9);
+		box-shadow: 0 0 0 0 rgba($alternate-accent-color, 0);
+	}
 }

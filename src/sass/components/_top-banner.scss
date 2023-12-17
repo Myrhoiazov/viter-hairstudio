@@ -1,0 +1,54 @@
+#top-banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+
+	.splide__list {
+		height: $height-topBanner;
+
+		.slide-1 {
+			font-size: 13px;
+			font-weight: 300;
+			color: $white;
+			background-color: $alternate-accent-color;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			text-transform: uppercase;
+
+			span {
+				margin-right: 5px;
+				font-weight: 700;
+			}
+		}
+
+		.slide-2 {
+			font-size: 13px;
+			font-weight: 300;
+			color: $white;
+			background-color: $alternate-accent-color;
+			height: 100%;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			a {
+				color: $white;
+				font-weight: 700;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				span {
+					font-weight: 300;
+					font-style: italic;
+				}
+			}
+		}
+	}
+}

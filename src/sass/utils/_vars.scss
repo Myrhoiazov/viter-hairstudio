@@ -1,31 +1,22 @@
 // Основной цвет шрифта, кнопок, логотипа
-// $brand-color: #d41443;
 $brand-color: #22534e;
 $brand-accent: #437e79;
 $alternate-accent-color: #d41342;
 
-// rgb(36 30 32)
-// Основной цвет бекграунда
+$height-topBanner: 35px;
 
 $bg-color: #c8a180;
 $bg-color-black: #241e20;
 $bg-light: #fff5f6;
-$bg-cafe: #f0d1a5;
-$bg-green: #c2e297;
-$social-bg-color: #fea5bb;
 $hover-bg-color: #ecebeb;
-$hover-bg-accent-color: #c7133e;
-$quote-bg-color: #fafafa;
-$quote-line-color: #e1e1e1;
-$mobile-bg-nav: rgba(225, 121, 146, 1);
+$bg-accent-color: #c7133e;
 
 // Основной текст описания
-$text-color: #000000;
-$subtext-color: #907e82;
+$black: #000;
 $white: #fff;
 
 // Font
-$main-font: Arial, Helvetica, sans-serif;
+$main-font: 'Montserrat', Helvetica, sans-serif;
 $brand-font: 'Titan One', sans-serif;
 
 // Transition
@@ -34,6 +25,5 @@ $transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 $transition-style: $transition-duration $transition-function;
 
 // Shadow
-
 $img-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 $img-shadow-accent: 0px 8px 30px rgba(212, 20, 67, 0.1);

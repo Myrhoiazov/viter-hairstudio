@@ -1,29 +1,32 @@
 {
-  "name": "beauty-hair",
-  "version": "2.0.0",
-  "description": "",
-  "homepage": "https://Myrhoiazov.github.io/viter-hairstudio",
-  "scripts": {
-    "start": "parcel src/*.html --open",
-    "build": "parcel build src/*.html --public-url /viter-hairstudio/",
-    "build:prod": "parcel build src/*.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Myrhoiazov/viter-hairstudio"
-  },
-  "keywords": [],
-  "author": "Denys Myrhoiazov <denis.mirgoyazov@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Myrhoiazov/viter-hairstudio/issues"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.0",
-    "modern-normalize": "^1.1.0",
-    "parcel": "^2.6.0",
-    "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
-  },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+	"name": "beauty-hair",
+	"version": "2.0.0",
+	"description": "",
+	"type": "module",
+	"scripts": {
+		"start": "parcel src/*.html --open",
+		"build": "parcel build src/*.html --public-url /viter-hairstudio/",
+		"build:prod": "parcel build src/*.html"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Myrhoiazov/viter-hairstudio"
+	},
+	"keywords": [],
+	"author": "Denys Myrhoiazov <denis.mirgoyazov@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Myrhoiazov/viter-hairstudio/issues"
+	},
+	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.6.0",
+		"@parcel/transformer-sass": "^2.6.0",
+		"@parcel/transformer-webmanifest": "^2.6.0",
+		"modern-normalize": "^1.1.0",
+		"parcel": "^2.6.0",
+		"parcel-reporter-clean-dist": "^1.0.4",
+		"parcel-transformer-hbs": "^1.0.4",
+		"posthtml-include": "^1.7.4"
+	},
+	"browserslist": "> 0.5%, last 2 versions, not dead"
 }
