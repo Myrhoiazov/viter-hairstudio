@@ -1,212 +1,200 @@
 .hero {
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	background-image: linear-gradient(to bottom,
+			rgba(34, 83, 78, 0.4),
+			rgba(34, 83, 78, 0.7)),
+		url('../images/hero/desktop/desktop_hero@2x.webp');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-  background-image: linear-gradient(
-      to bottom,
-      rgba(34, 83, 78, 0.4),
-      rgba(34, 83, 78, 0.7)
-    ),
-    url('../images/hero/desktop/desktop_hero@2x.webp');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	@media screen and (min-width: 1280px) {
+		background-image: linear-gradient(to bottom,
+				rgba(34, 83, 78, 0.4),
+				rgba(34, 83, 78, 0.7)),
+			url('../images/hero/desktop/desktop_hero@1.5x.webp');
 
-  @media screen and (min-width: 1280px) {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(34, 83, 78, 0.4),
-        rgba(34, 83, 78, 0.7)
-      ),
-      url('../images/hero/desktop/desktop_hero@1.5x.webp');
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(34, 83, 78, 0.4),
-          rgba(34, 83, 78, 0.7)
-        ),
-        url('../images/hero/desktop/desktop_hero@2x.webp');
-    }
-  }
+		@media (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+			background-image: linear-gradient(to bottom,
+					rgba(34, 83, 78, 0.4),
+					rgba(34, 83, 78, 0.7)),
+				url('../images/hero/desktop/desktop_hero@2x.webp');
+		}
+	}
 }
 
 .hero__body {
-  padding-top: 116px;
-  padding-bottom: 158px;
+	padding-top: 116px;
+	padding-bottom: 158px;
 
-  @media screen and (min-width: 768px) {
-    padding-top: 46px;
-    padding-bottom: 46px;
-  }
+	@media screen and (min-width: 768px) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 
-  @media screen and (min-width: 1280px) {
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
+	@media screen and (min-width: 1280px) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 }
 
-// Header Title
-
 .hero__items {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 40px;
-  }
+	@media screen and (min-width: 1280px) {
+		margin-bottom: 40px;
+	}
 }
 
 .hero__title {
-  line-height: 1.2;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+	line-height: 1.2;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: $white;
 
-  color: $white;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 20px;
+	}
 
-  @media screen and (max-width: 1279px) {
-    font-size: 32px;
-    max-width: 462px;
-  }
+	@media screen and (max-width: 1279px) {
+		font-size: 32px;
+		max-width: 462px;
+	}
 
-  @media screen and (min-width: 1280px) {
-    font-size: 54px;
+	@media screen and (min-width: 1280px) {
+		font-size: 54px;
+		max-width: 800px;
+		margin-bottom: 24px;
 
-    max-width: 800px;
-    margin-bottom: 24px;
+		&--accent {
+			max-width: 462px;
+			font-family: $main-font;
+		}
+	}
 
-    &--accent {
-      max-width: 462px;
-      font-family: $main-font;
-    }
-  }
+	&--accent {
+		display: inline-block;
+		font-family: $main-font;
+		font-weight: 400;
+		font-size: 18px;
+		letter-spacing: 0;
 
-  &--accent {
-    display: inline-block;
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0;
+		padding: 10px 0;
 
-    padding: 10px 0;
+		text-transform: none;
+		color: $white;
 
-    text-transform: uppercase;
-    color: $white;
+		@media screen and (max-width: 767px) {
+			font-size: 16px;
+		}
 
-    @media screen and (min-width: 1280px) {
-      max-width: 462px;
-    }
-  }
+		@media screen and (min-width: 1280px) {
+			max-width: 650px;
+		}
+	}
 }
 
 .hero__body .button {
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.1;
+	font-family: $main-font;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 8px;
+	line-height: 1.1;
+	height: 32px;
 
-  height: 32px;
+	@media screen and (min-width: 1280px) {
+		font-size: 14px;
+		line-height: 1.2;
+		height: 40px;
+		padding: 11px 22px;
+	}
 
-  @media screen and (min-width: 1280px) {
-    font-size: 14px;
-    line-height: 1.2;
-    height: 40px;
-    padding: 11px 22px;
-  }
-
-  &.button + .button {
-    margin-left: 8px;
-  }
+	&.button+.button {
+		margin-left: 8px;
+	}
 }
 
 .hero__text {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.2;
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 8px;
+	line-height: 1.2;
+	color: $white;
+	text-align: center;
 
-  color: $white;
+	&--accent {
+		padding-right: 10px;
+	}
 
-  text-align: center;
+	@media screen and (min-width: 1280px) {
+		font-size: 14px;
+		line-height: 1.3;
 
-  &--accent {
-    padding-right: 10px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 14px;
-    line-height: 1.3;
-
-    &--accent {
-      padding-right: 20px;
-    }
-  }
+		&--accent {
+			padding-right: 20px;
+		}
+	}
 }
 
 .hero__product {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 1280px) {
-    // margin-left: 60px;
-  }
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 }
 
 .product__body {
-  width: 200px;
+	width: 200px;
 
-  @media screen and (max-width: 1279px) {
-    width: 114px;
-  }
+	@media screen and (max-width: 1279px) {
+		width: 114px;
+	}
 }
 
 .product__text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 150%;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 8px;
+	line-height: 150%;
+	max-width: 114px;
+	color: $white;
+	margin-bottom: 7px;
 
-  max-width: 114px;
-
-  color: $white;
-  margin-bottom: 7px;
-
-  @media screen and (min-width: 1280px) {
-    max-width: 200px;
-    font-size: 14px;
-    line-height: 140%;
-    margin-bottom: 20px;
-  }
+	@media screen and (min-width: 1280px) {
+		max-width: 200px;
+		font-size: 14px;
+		line-height: 140%;
+		margin-bottom: 20px;
+	}
 }
 
 .product__body .button {
-  width: 18px;
-  height: 18px;
-  padding: 0;
+	width: 18px;
+	height: 18px;
+	padding: 0;
 
-  @media screen and (min-width: 1280px) {
-    width: 26px;
-    height: 26px;
-    padding: 0;
-  }
+	@media screen and (min-width: 1280px) {
+		width: 26px;
+		height: 26px;
+		padding: 0;
+	}
 }
 
 .product__icon {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  fill: $brand-color;
+	width: 10px;
+	height: 10px;
+	padding: 0;
+	fill: $brand-color;
 }

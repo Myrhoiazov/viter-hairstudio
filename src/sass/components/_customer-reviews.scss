@@ -1,183 +1,153 @@
 .customer-reviews {
-  display: none;
+	@include breakpointFrom(tablet) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		text-align: center;
+		position: relative;
+		padding-bottom: 106px;
+	}
 
-  @include breakpointFrom(tablet) {
-    display: block;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    position: relative;
-    padding-bottom: 106px;
-  }
+	.customer-reviews__container {
+		padding: 10px 0;
+	}
 
-  &__container {
-    @include breakpointFrom(tablet) {
-      padding-left: 74px;
-      padding-right: 74px;
-    }
+	.customer-header {
+		margin-bottom: 20px;
 
-    @include breakpointFrom(desktop) {
-      padding-left: 83px;
-      padding-right: 83px;
-    }
-  }
+		@include breakpointFrom(tablet) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 40px;
+		}
 
-  &__photo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 32px;
+		.customer-reviews__title {
+			margin-bottom: 10px;
+			margin-top: 40px;
 
-    & img {
-      display: block;
-      height: 100%;
-    }
-  }
+			@include breakpointFrom(tablet) {
+				text-align: left;
+				max-width: 400px;
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		}
 
-  &__quote-wrapper {
-    width: 70%;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 43px;
-    padding-bottom: 26px;
-    position: relative;
-    z-index: 1;
-    background-color: $quote-bg-color;
-    margin-bottom: 36px;
-    margin-left: auto;
-    margin-right: auto;
+		a {
+			display: inline-block;
+			text-decoration: none;
+			font-size: 16px;
+			color: $brand-accent;
 
-    @include breakpointFrom(tablet) {
-      padding-left: 6px;
-      padding-right: 6px;
-      padding-top: 37px;
-      padding-bottom: 36px;
-    }
+			transition: all $transition-style;
 
-    @include breakpointFrom(desktop) {
-      padding-left: 105px;
-      padding-right: 105px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-  }
+			&:hover {
+				color: $bg-accent-color;
+			}
+		}
 
-  &__subtext {
-    @include breakpointFrom(tablet) {
-      font-size: 16px;
-    }
-
-    @include breakpointFrom(desktop) {
-      font-size: 21px;
-    }
-  }
-
-  &__quote {
-    padding-left: 15px;
-    position: relative;
-    padding-right: 8px;
-    font-size: 12px;
-
-    font-weight: 500;
-    line-height: 2.55;
-    text-align: center;
-    z-index: 0;
-    background: repeating-linear-gradient(
-      $quote-bg-color,
-      $quote-bg-color 26px,
-      $quote-line-color 27px,
-      $quote-bg-color 28px 31px
-    );
-
-    @include breakpointFrom(tablet) {
-      font-size: 14px;
-      line-height: 2.16;
-      letter-spacing: 0.04em;
-      padding-left: 45px;
-      padding-right: 50px;
-      background: repeating-linear-gradient(
-        $quote-bg-color,
-        $quote-bg-color 25px,
-        $quote-line-color 26px,
-        $quote-bg-color 27px 32px
-      );
-    }
-
-    @include breakpointFrom(desktop) {
-      font-size: 16px;
-      line-height: 1.86;
-      letter-spacing: 0.04em;
-      padding-left: 36px;
-      padding-right: 36px;
-      background: repeating-linear-gradient(
-        $quote-bg-color,
-        $quote-bg-color 26px,
-        $quote-line-color 27px,
-        $quote-bg-color 28px 31px
-      );
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      width: 54px;
-      height: 40px;
-      top: -17px;
-      left: 6;
-      z-index: -1;
-    }
-  }
-
-  &__person {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1.86;
-    margin-bottom: 16px;
-  }
+	}
 }
 
-.slick-dots {
-  display: flex !important;
-  justify-content: center;
-}
+.rewiews-item {
+	padding: 55px 30px 30px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	flex-shrink: 0;
+	border-radius: 10px;
+	border: 1px solid $brand-color;
 
-.slick-active .sl-link {
-  background-image: url('../images/home.svg');
-  width: 44px;
-  height: 44px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-}
+	&.review-scorecard {
+		color: $white;
+		font-weight: 700;
+		background-color: $bg-accent-color;
+		align-items: center;
+		border-color: transparent;
 
-.slick-active .sl-link .sl-inner {
-  display: none;
-}
+		.reviews-bal {
+			font-size: 104px;
 
-.sl-icon {
-  width: 12px;
-  height: 12px;
-}
+			@include breakpointFrom(tablet) {
+				font-size: 64px;
+			}
 
-.sl-link {
-  border: none;
-  padding: 16px;
-  cursor: pointer;
-  background-color: transparent;
-  transition: makeTransition(background-color);
+			@include breakpointFrom(desktop) {
+				font-size: 104px;
+			}
 
-  &:hover .sl-inner {
-    background-color: $brand-color;
-  }
-}
+			span {
+				margin-left: 5px;
+				display: inline-block;
+				font-size: 18px;
+			}
+		}
 
-.sl-inner {
-  width: 12px;
-  height: 12px;
-  background-size: contain;
-  background-color: #d9d9d9;
-  border-radius: 50%;
+		.review__description {
+			font-weight: 400;
+			height: auto;
+
+			&::after {
+				background-image: none;
+			}
+		}
+	}
+
+	.review__description {
+		position: relative;
+		flex: 1;
+		font-size: 16px;
+		line-height: 130%;
+		text-align: left;
+		padding: 20px 0;
+
+		max-height: 220px;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 60px;
+			background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
+			filter: blur();
+		}
+	}
+
+	.reviewer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding-top: 20px;
+
+		&__photo {
+			margin-right: 15px;
+
+			img {
+				display: block;
+			}
+		}
+
+		&____identification {
+			.reviewer__name {
+				font-size: 18px;
+				line-height: 100%;
+				letter-spacing: -.01em;
+				color: #000;
+				margin-bottom: 7px;
+			}
+
+			.reviewer__date {
+				font-size: 16px;
+				line-height: 100%;
+				letter-spacing: -.01em;
+				color: #000;
+				opacity: .6;
+			}
+
+		}
+	}
 }

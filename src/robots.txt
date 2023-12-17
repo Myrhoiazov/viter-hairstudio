@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://viter-hairstudio.com.ua
+
