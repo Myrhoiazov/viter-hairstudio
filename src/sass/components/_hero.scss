@@ -107,20 +107,23 @@
 	font-family: $main-font;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 8px;
+	font-size: 12px;
 	line-height: 1.1;
 	height: 32px;
+	margin-bottom: 10px;
 
 	@media screen and (min-width: 1280px) {
 		font-size: 14px;
 		line-height: 1.2;
 		height: 40px;
 		padding: 11px 22px;
+		margin-bottom: 0;
+
+		&.button+.button {
+			margin-left: 8px;
+		}
 	}
 
-	&.button+.button {
-		margin-left: 8px;
-	}
 }
 
 .hero__text {
@@ -155,25 +158,18 @@
 	}
 }
 
-.product__body {
-	width: 200px;
-
-	@media screen and (max-width: 1279px) {
-		width: 114px;
-	}
-}
-
 .product__text {
 	font-style: normal;
 	font-weight: 400;
-	font-size: 8px;
+	font-size: 12px;
 	line-height: 150%;
-	max-width: 114px;
+	max-width: 300px;
 	color: $white;
 	margin-bottom: 7px;
 
 	@media screen and (min-width: 1280px) {
-		max-width: 200px;
+		max-width: 300px;
+		width: 100%;
 		font-size: 14px;
 		line-height: 140%;
 		margin-bottom: 20px;

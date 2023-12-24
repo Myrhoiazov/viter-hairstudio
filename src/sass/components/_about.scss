@@ -88,7 +88,7 @@
 .about__text {
 	font-family: $main-font;
 	font-weight: 500;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.62;
 	color: $brand-accent;
 
@@ -134,8 +134,9 @@
 
 .img__wrapper {
 	position: relative;
-	width: 290px;
-	height: 300px;
+	max-width: 290px;
+	max-height: 300px;
+	width: 100%;
 
 	border: 1px solid $brand-accent;
 	border-radius: 20px;
@@ -157,8 +158,9 @@
 	}
 
 	@include breakpointFrom(tablet) {
-		width: 390px;
-		height: 350px;
+		max-width: 390px;
+		max-height: 350px;
+		width: 100%;
 
 		.about__data {
 			right: 50px;
@@ -175,8 +177,9 @@
 	}
 
 	@include breakpointFrom(desktop) {
-		width: 440px;
-		height: 450px;
+		max-width: 440px;
+		max-height: 450px;
+		width: 100%;
 
 		.about__data {
 			right: 0;
@@ -196,8 +199,9 @@
 .about__img {
 	display: block;
 
-	width: 290px;
-	height: 300px;
+	max-width: 290px;
+	max-height: 300px;
+	width: 100%;
 
 	transform: translate(-15px, 15px);
 
@@ -206,16 +210,26 @@
 	overflow: hidden;
 	box-shadow: $img-shadow;
 
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
 	@include breakpointFrom(tablet) {
-		width: 350px;
-		height: 350px;
+		max-width: 350px;
+		max-height: 350px;
+		width: 100%;
 
 		transform: translate(-15px, 30px);
 	}
 
 	@include breakpointFrom(desktop) {
-		width: 450px;
-		height: 450px;
+		max-width: 450px;
+		max-height: 450px;
+		width: 100%;
 
 		margin-left: 60px;
 	}
