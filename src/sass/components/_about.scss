@@ -71,16 +71,17 @@
 
 .about__block {
 	margin-top: 40px;
-	width: 310px;
+	max-width: 310px;
+	width: 100%;
 
 	@include breakpointFrom(tablet) {
 		margin-left: 32px;
 		margin-top: 0;
-		width: 335px;
+		max-width: 335px;
 	}
 
 	@include breakpointFrom(desktop) {
-		width: 440px;
+		max-width: 440px;
 		margin-left: 160px;
 	}
 }
@@ -147,6 +148,8 @@
 		position: absolute;
 		right: 30px;
 		bottom: 0;
+		padding: 5px;
+		background-color: $white;
 
 		.about__name {
 			font-size: 14px;

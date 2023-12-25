@@ -80,6 +80,8 @@
 
 		& .contact__items {
 			display: flex;
+			flex-direction: column;
+			gap: 20px;
 			margin: 40px;
 		}
 
@@ -107,6 +109,7 @@
 
 		& .contact__items {
 			display: flex;
+			gap: 20px;
 			margin-left: 40px;
 			margin-top: 40px;
 		}
@@ -206,10 +209,6 @@
 		&:hover .contact__icon,
 		&:hover .contact__link {
 			fill: $bg-color-black;
-		}
-
-		&:not(:first-child) {
-			margin-left: 10px;
 		}
 
 		.contact__icon {
