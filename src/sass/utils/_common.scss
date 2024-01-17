@@ -177,6 +177,10 @@ ol {
 	transition: makeTransition(background-color);
 }
 
+.d-none {
+	display: none !important;
+}
+
 .button:hover,
 .button:focus {
 	background-color: $hover-bg-color;
