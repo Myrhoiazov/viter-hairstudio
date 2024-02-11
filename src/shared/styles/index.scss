@@ -1,0 +1,26 @@
+@import '../../../node_modules/modern-normalize/modern-normalize.css';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/common';
+
+@import './components/header';
+@import './components/hero';
+@import './components/about';
+@import './components/masters';
+@import './components/products';
+@import './components/courses';
+@import './components/price';
+@import './components/gallery';
+@import './components/customer-reviews';
+@import './components/faq';
+@import './components/footer';
+@import './components/top-banner';
+@import './components/before-affter';
+
+@import './components/utility';
+@import './components/modals';
+
+// pages
+@import './pages/rules';
+@import './pages/politics';
+@import './pages/masters';
