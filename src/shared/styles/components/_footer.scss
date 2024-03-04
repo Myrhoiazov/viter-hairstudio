@@ -279,30 +279,12 @@
 
 .contact__map-wrap {
 	overflow: hidden;
-	border-radius: 20px;
 	box-shadow: $img-shadow-accent;
-	margin-bottom: 20px;
 
 	.google-map {
 		display: block;
 		width: 100% !important;
 		height: 350px;
-	}
-
-	@include breakpointFrom(tablet) {
-		margin-bottom: 20px;
-
-		.google-map {
-			width: 600px;
-		}
-	}
-
-	@include breakpointFrom(desktop) {
-		margin: 0;
-
-		.google-map {
-			width: 600px;
-		}
 	}
 }
 

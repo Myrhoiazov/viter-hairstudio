@@ -1,6 +1,7 @@
 // Masters slider
 const mastersSlide = new Splide('#mastersSlide', {
   type: 'loop',
+  autoplay: true,
   perPage: 3,
   width: '50rem',
   gap: 4,
